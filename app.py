@@ -10,11 +10,12 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# Load model và tokenizer đã huấn luyện
+# Load mô hình từ Hugging Face Hub
 @st.cache_resource
 def load_model():
-    model = AutoModelForSequenceClassification.from_pretrained("./distilbert_sentiment_model")
-    tokenizer = AutoTokenizer.from_pretrained("./distilbert_sentiment_model")
+    model_name = "nlptown/bert-base-multilingual-uncased-sentiment"
+    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     return model.to(device), tokenizer
 
 # Thiết bị
