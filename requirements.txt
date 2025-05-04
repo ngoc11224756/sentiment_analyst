@@ -1,0 +1,8 @@
+streamlit
+pandas
+matplotlib
+seaborn
+torch
+transformers
+vaderSentiment
+scikit-learn
