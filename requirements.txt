@@ -1,8 +1,10 @@
 streamlit
 pandas
+numpy
 matplotlib
 seaborn
 torch
 transformers
 vaderSentiment
 scikit-learn
+
